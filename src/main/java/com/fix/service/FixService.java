@@ -107,6 +107,7 @@ public class FixService  implements Application {
 	public void onLogon(SessionID sessionID) {
 		this.sessionID=sessionID;
 		observableLogon.logon(sessionID);
+	
 	}
 
 	public void onLogout(SessionID sessionID) {
@@ -152,13 +153,7 @@ public class FixService  implements Application {
 	public void fromAdmin(Message message, SessionID sessionId)
 			throws FieldNotFound, IncorrectDataFormat, IncorrectTagValue, RejectLogon {
 		
-		if(message instanceof Heartbeat)
-		{
-			Heartbeat incoming=(Heartbeat) message;
-			OrderID orderID = new OrderID();
-			
-		}
-		
+		System.out.println("Admin")	;	
 		
 		new MessageProcessor(message, sessionId).processMessage();
 	}
