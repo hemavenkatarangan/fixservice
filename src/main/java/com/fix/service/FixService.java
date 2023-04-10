@@ -432,7 +432,7 @@ public class FixService  implements Application {
 
 	private static SessionSettings initialize(String[] args) throws FileNotFoundException, ConfigError, IOException {
 		InputStream inputStream = null;
-		System.out.println("Path "+args[0]);
+		
 		if (args.length == 0) {
 			inputStream = new BufferedInputStream(new FileInputStream(new File("config/fixservice.cfg")));
 		} else if (args.length == 1) {
